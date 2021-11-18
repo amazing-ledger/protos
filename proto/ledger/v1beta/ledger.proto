@@ -1,9 +1,12 @@
 syntax = "proto3";
 
+// This document follows the best practices described here:
+// https://github.com/uber/prototool/blob/dev/style/README.md
+
 package ledger.v1beta;
 
 option csharp_namespace = "Ledger.V1beta";
-option go_package = "ledgerv1beta";
+option go_package = "./;ledgerv1beta";
 
 import "google/protobuf/struct.proto";
 import "google/protobuf/timestamp.proto";
