@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: bufbuild/buf-setup-action@v0.6.0
       - uses: bufbuild/buf-lint-action@v1
-      - uses: bufbuild/buf-breaking-action@v1
-        with:
-          # The 'main' branch of the GitHub repository that defines the module.
-          against: 'https://github.com/stone-co/the-amazing-ledger-proto.git#branch=main'
+#      - uses: bufbuild/buf-breaking-action@v1
+#        with:
+#          # The 'main' branch of the GitHub repository that defines the module.
+#          against: 'https://github.com/stone-co/the-amazing-ledger-proto.git#branch=main'
