@@ -132,7 +132,7 @@ message AccountEntry {
   string id = 1;
   // Account version at the time.
   int64 version = 2;
-  // Operation: debit or credit.``
+  // Operation: debit or credit.
   Operation operation = 3;
   // Amount (in cents).
   int64 amount = 4;
