@@ -67,13 +67,21 @@ message CreateTransactionResponse {}
 message GetAccountBalanceRequest {
   // The account name, can be either a synthetic or an analytical one.
   string account = 1;
+  // Start date for calculating account balance, INCLUSIVE.
+  // If passed, the version will be the most recent one within the interval.
+  google.protobuf.Timestamp start_date = 2;
+  // End date for calculating account balance, EXCLUSIVE.
+  // If passed, the version will be the most recent one within the interval.
+  google.protobuf.Timestamp end_date = 3;
 }
 
 // GetAccountBalance Response
 message GetAccountBalanceResponse {
   // The account name.
   string account = 1;
-  // The account version. When a synthetic account is passed, -1 will be returned.
+  // The account version.
+  // When a synthetic account is passed, -1 will be returned.
+  // If either start_date or end_date is passed, the value will be the most recent one within the interval.
   int64 current_version = 2;
   // The account balance.
   int64 balance = 3;
