@@ -142,6 +142,8 @@ message AccountEntry {
   google.protobuf.Timestamp competence_date = 6;
   // The entry metadata.
   google.protobuf.Struct metadata = 7;
+  // The account responsible for the entry.
+  string account = 8;
 }
 
 // Represents a syntethic report request
